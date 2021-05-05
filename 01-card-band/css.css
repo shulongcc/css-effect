@@ -1,0 +1,75 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+body{
+  display: flex; 
+  justify-content: center;
+  align-items: center;
+
+  background: #ececec;
+  width: 100vw;
+  height: 100vh;
+}
+.box{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  background: #fff;
+  width: 600px;
+  height: 400px;
+  box-shadow: -10px 10px 10px rgba(0, 0, 0, .1);
+  border-radius: 5px;
+}
+.cover-text{
+  margin: 20px;
+  text-align: center;
+  font-size: 80px;
+  font-weight: bold;
+  color: #939393;
+}
+.band{
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  top: -10px;
+  right: -10px;
+  overflow: hidden;
+}
+.band::after,
+.band::before{
+  border: 5px solid #2880b8;
+
+  content: '';
+  position: absolute;
+  /* 三角 */
+  border-top-color: transparent;
+  border-right-color: transparent;
+}
+.band::after{
+  bottom: 0;
+  right: 0;
+}
+.band span{
+  background: #3699d5;
+  color: #fff;
+
+  width: 225px;
+  font-size: 24px;
+  font-weight: bold;
+  padding: 8px 0;
+  position: absolute;
+  top: 30px;
+  left: -25px;
+  text-align: center;
+  text-shadow:0 1px 1px rgba(0,0,0,.2);
+  transform: rotate(45deg);
+
+  box-shadow:0 10px 10px rgba(0,0,0,.1);
+
+  /* 这里其实是有所瑕疵的 作为阴影 形状是不对的*/
+  /* box-shadow:0 10px 10px black; */
+}
